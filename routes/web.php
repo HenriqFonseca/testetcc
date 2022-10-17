@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExercicioController;
+use App\Http\Controllers\UserController;
 use App\Models\Exercicio;
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/login', [ProfileController::class, 'login'])->name('profile.login')
     Route::get('/criar', [ExercicioController::class, 'create'])->name('create.exercicio');
     
 Route::post('/adicionar', [ExercicioController::class, 'store']);
+
+Route::post('/auth', [UserController::class, 'auth']);

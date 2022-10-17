@@ -16,6 +16,9 @@ class ProfessorAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if(auth()->check() AND auth()->user()->professor){
+            return $next($request);
+
+        }
     }
 }

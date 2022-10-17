@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('aluno');
+            $table->string('cpf')->unique();
             $table->boolean('professor');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
