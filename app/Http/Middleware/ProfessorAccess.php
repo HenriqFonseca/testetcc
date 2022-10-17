@@ -18,7 +18,6 @@ class ProfessorAccess
     {
         if(auth()->check() AND auth()->user()->professor){
             return $next($request);
-
         }
     }
 }
