@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('exercicios', function (Blueprint $table) {
             $table->id();
-            $table->string('nome')->default(false);
-            $table->boolean('perna')->default(false);
-            $table->boolean('triceps')->default(false);
-            $table->boolean('biceps')->default(false);
-            $table->boolean('ombro')->default(false);
-            $table->boolean('abdomen')->default(false);
+            $table->string('nome')->default(false)->nullable();
+            $table->boolean('perna')->default(false)->nullable();
+            $table->boolean('triceps')->default(false)->nullable();
+            $table->boolean('biceps')->default(false)->nullable();
+            $table->boolean('ombro')->default(false)->nullable();
+            $table->boolean('abdomen')->default(false)->nullable();
             $table->timestamps();
         });
     }

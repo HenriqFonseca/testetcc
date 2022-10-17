@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="item-box">
-                    <a class="nav-link" href="">Item
+                    <a class="nav-link" href="{{ route('create.exercicio') }}">Page
 
                     </a>
                 </li>

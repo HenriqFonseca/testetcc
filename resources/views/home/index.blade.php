@@ -40,6 +40,13 @@
 
     @section('conteudo')
     <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if (session('msg'))
+                    <p class="msg">{{ session('msg') }}</p>
+                @endif
+            </div>
+        </div>
         <!-- Carousel -->
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
 

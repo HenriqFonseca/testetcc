@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ExercicioController;
+use App\Models\Exercicio;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +22,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
                 // rota para a view login
 Route::get('/login', [ProfileController::class, 'login'])->name('profile.login');
 
+//Verificar se a model está funcionando
 
+
+    Route::get('/teste', [ExercicioController::class, 'index']);
+    Route::get('/criar', [ExercicioController::class, 'create'])->name('create.exercicio');
+    
+Route::post('/adicionar', [ExercicioController::class, 'store']);

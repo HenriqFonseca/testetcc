@@ -13,4 +13,9 @@ class Treino extends Model
         'instrutor_id',
         'exercicio_id',
     ];
+
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

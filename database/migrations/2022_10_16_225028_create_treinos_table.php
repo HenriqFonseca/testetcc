@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('treinos', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->integer('serie');
+            $table->integer('repeticao');
+            $table->integer('img_path');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('instrutor_id');
             $table->unsignedBigInteger('exercicio_id');
@@ -34,4 +38,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('treinos');
     }
+
 };
