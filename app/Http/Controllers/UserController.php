@@ -12,11 +12,19 @@ class UserController extends Controller
 
         $this->validate($request,[
             'cpf' => 'required',
-            'senha' => 'required'
+            'password' => 'required',
+            'professor' => 'required',
         ]);
 
-        if(Auth::attempt(['cpf'=>$request->cpf, 'senha' => $request->senha])){
+
+        if(Auth::attempt(['cpf'=>$request->cpf, 'password' => $request->password , 'aluno' =>$request->aluno])){
             dd('LOGOU');
+            if($request->aluno && $request->professor === 0){
+                $this->validate($request,[
+                    'aluno' => 'required',
+                    'professor' => 'required',
+                ]);
+            }
         }else{
             return redirect('/');
         }

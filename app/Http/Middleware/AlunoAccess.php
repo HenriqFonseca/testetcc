@@ -16,7 +16,8 @@ class AlunoAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        
-        return $next($request);
+        if(auth()->check() AND auth()->user()->aluno){
+            return $next($request);
+        }
     }
 }

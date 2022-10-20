@@ -27,12 +27,20 @@
                     <h2 class="form-signin-heading">Insira seu cadastro</h2>
                     <input type="text" class="input" name="cpf" placeholder="CPF" autofocus="" />
                     <br>
-                    <input type="password" class="input" name="senha" placeholder="Senha" />
-                    <label class="checkbox">
+                    <input type="password" class="input" name="password" placeholder="Senha" />
                         <br>
+                        <div>
+                            <label>
+                                <input type="radio" name="aluno" value="1" >Aluno
+                            </label>
+                            <label>
+                                <input type="radio" name="professor" value="1">Professor
+                            </label>
+                        </div>
                         <button class="login-button">
                             Fazer Login
                         </button><br>
+                       
                 </form>
                 <ul class="nav-item-box">
                     <a class="forgot-password" href="">Esqueci minha senha

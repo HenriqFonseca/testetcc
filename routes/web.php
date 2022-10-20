@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExercicioController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\ProfessorAccess;
 use App\Models\Exercicio;
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/login', [ProfileController::class, 'login'])->name('profile.login');
 
 //Verificar se a model está funcionando
-
 
     Route::get('/teste', [ExercicioController::class, 'index']);
     Route::get('/criar', [ExercicioController::class, 'create'])->name('create.exercicio');
