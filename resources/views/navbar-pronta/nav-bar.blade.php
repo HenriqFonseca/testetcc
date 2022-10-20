@@ -48,6 +48,11 @@
                     Fazer Login
                 </button></a>
             @endguest
+            @auth
+            <a href="{{ route('profile.login') }} "><button class="login-button">
+                SAIR
+            </button></a>
+            @endauth
 
         </div>
     </nav>
