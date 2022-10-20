@@ -21,10 +21,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- STYLES -->
-    <link href="homecss/index.css" rel="stylesheet">
+    <link href="/homecss/index.css" rel="stylesheet">
 
     <!-- SCRIPTS -->
     <script defer src="js/script_index.js"></script>
+    <script defer src="/js/nav-bar-js.js"></script>
 
     <!-- PWA  -->
     <meta name="theme-color" content="#6777ef"/>
@@ -59,14 +60,14 @@
 
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/8225.jpg" alt="" class="d-block w-100">
+                <div class="/carousel-item active">
+                    <img src="/img/8225.jpg" alt="" class="d-block w-100">
+                </div>
+                <div class="/carousel-item">
+                    <img src="/img/897.jpg" alt="" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/897.jpg" alt="" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/lulaxbolso.jpg" alt="" class="d-block w-100">
+                    <img src="/img/lulaxbolso.jpg" alt="" class="d-block w-100">
                 </div>
             </div>
 

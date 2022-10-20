@@ -24,6 +24,7 @@ class User extends Authenticatable
         'aluno',
         'professor',
         'cpf',
+        'status',
     ];
 
     /**

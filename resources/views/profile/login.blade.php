@@ -22,7 +22,7 @@
                         </ul>
                     </div>
                 @endif
-                <form class="form-signin" method="POST" action="/auth">
+                <form class="form-signin" method="POST" action="{{ route('auth') }}">
                   @csrf
                     <h2 class="form-signin-heading">Insira seu cadastro</h2>
                     <input type="text" class="input" name="cpf" placeholder="CPF" autofocus="" />
@@ -30,12 +30,7 @@
                     <input type="password" class="input" name="password" placeholder="Senha" />
                         <br>
                         <div>
-                            <label>
-                                <input type="radio" name="aluno" value="1" >Aluno
-                            </label>
-                            <label>
-                                <input type="radio" name="professor" value="1">Professor
-                            </label>
+                          
                         </div>
                         <button class="login-button">
                             Fazer Login
