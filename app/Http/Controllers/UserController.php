@@ -14,13 +14,27 @@ class UserController extends Controller
 
         $user = new User();
 
+        $user ->email = $request->email;
         $user ->cpf = $request->cpf;
         $user ->password = bcrypt($request->password);
         $user ->save();
-       // if(Auth::loginUsingId(['cpf' => $request->cpf, 'password'=>$request->password])){
-  //          dd('logou');
-      //  }else{
-      //      dd('n logou');
-      //  }
+        return redirect()->route('profile.login');
+
     }
+
+    public function login(Request $request){
+
+        if (Auth::attempt(['password' => $request->password, 'cpf'=>$request->cpf])){
+            return redirect()->route('home.index');
+        }else{
+            dd('não logou');
+        }
+    }
+
+    public function logout(){
+        
+    }
+ 
 }
+
+

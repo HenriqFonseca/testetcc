@@ -42,9 +42,12 @@
                     </a>
                 </li>
             </ul>
+            @guest
+            
             <a href="{{ route('profile.login') }} "><button class="login-button">
                     Fazer Login
                 </button></a>
+            @endguest
 
         </div>
     </nav>

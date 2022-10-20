@@ -10,4 +10,8 @@ class ProfileController extends Controller
         return view('profile.login');
                 
     }
+
+    public function registrar(){
+        return view('profile.registrar');
+    }
 }

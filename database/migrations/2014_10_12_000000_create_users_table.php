@@ -20,7 +20,7 @@ return new class extends Migration
            // $table->boolean('status_treino');
             $table->string('cpf')->unique();
             $table->boolean('professor')->nullable();
-            $table->string('email')->unique()->nullable();
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
