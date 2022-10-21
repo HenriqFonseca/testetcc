@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
+
     public function auth(Request $request){
 
         $user = new User();
@@ -25,14 +26,18 @@ class UserController extends Controller
     public function login(Request $request){
 
         if (Auth::attempt(['password' => $request->password, 'cpf'=>$request->cpf])){
+            $request->session()->regenerate();
             return redirect()->route('home.index');
         }else{
             dd('não logou');
         }
     }
 
-    public function logout(){
-        
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('home.index');
     }
  
 }

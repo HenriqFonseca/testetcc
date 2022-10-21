@@ -34,3 +34,4 @@ Route::post('/adicionar', [ExercicioController::class, 'store']);
 
 Route::post('/auth', [UserController::class, 'auth'])->name('auth');
 Route::post('/auth2', [UserController::class, 'login'])->name('auth2');
+Route::get('/logout', [UserController::class, 'logout'])->name('user.logout');

@@ -41,6 +41,14 @@
 
                     </a>
                 </li>
+                @auth
+                
+                <li class="item-box">
+                    <a class="nav-link" href="{{ route('create.exercicio') }}">
+                        {{ auth()->user()->email }}
+                    </a>
+                </li>
+                @endauth
             </ul>
             @guest
             
@@ -49,7 +57,7 @@
                 </button></a>
             @endguest
             @auth
-            <a href="{{ route('profile.login') }} "><button class="login-button">
+            <a href="{{ route('user.logout') }} "><button class="login-button">
                 SAIR
             </button></a>
             @endauth
