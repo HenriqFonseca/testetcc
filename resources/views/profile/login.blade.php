@@ -39,8 +39,10 @@
                        
                 </form>
                 <ul class="nav-item-box">
-                    <a class="forgot-password" href="">Esqueci minha senha
+                    <a class="forgot-password" href="">
+                        Esqueci minha senha
                     </a>
+                </ul>
             </div>
             <a href="{{ route('home.index') }}"class="logo-box">
                 <img class="img" src="img/logo-vertical.png" alt="">

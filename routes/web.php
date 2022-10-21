@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExercicioController;
+use App\Http\Controllers\TreinoController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\ProfessorAccess;
 use App\Models\Exercicio;
@@ -20,7 +21,8 @@ use App\Models\Exercicio;
 
 //Route::get('oq vai aparecer na URL' [Controller definido] , 'nome da função que está dentro do controller'])->name('nome que posso usar nos redirecionamentos')
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-
+Route::get('/treino/aluno', [TreinoController::class, 'aluno'])->middleware(['auth'])->name('treino.aluno');
+Route::get('/treino/professor', [TreinoController::class, 'professor'])->middleware('professor')->name('treino.professor');
                 // rota para a view login
 Route::get('/login', [ProfileController::class, 'login'])->name('profile.login');
 Route::get('/registrar', [ProfileController::class, 'registrar'])->name('profile.registrar');

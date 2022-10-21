@@ -33,7 +33,7 @@
         <div class="nav-item-box">
             <ul class="nav-list">
                 <li class="item-box">
-                    <a class="nav-link active-item" href="">Item
+                    <a class="nav-link active-item" href="{{ route('treino.aluno') }}">aluno
                     </a>
                 </li>
                 <li class="item-box">
@@ -42,12 +42,13 @@
                     </a>
                 </li>
                 @auth
-                
+                <ul>
                 <li class="item-box">
-                    <a class="nav-link" href="{{ route('create.exercicio') }}">
-                        {{ auth()->user()->email }}
+                    <a class="nav-link" href="{{ route('create.exercicio') }}">olá
+                        {{ auth()->user()->name }}
                     </a>
                 </li>
+                </ul>
                 @endauth
             </ul>
             @guest

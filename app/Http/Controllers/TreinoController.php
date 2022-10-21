@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class TreinoController extends Controller
 {
-    public function index(){
-        return view('');
+    public function aluno(){
+        return view('treino.aluno');
     }
 
+    public function professor(){
+        return view('treino.professor');
+    }
+
+    public function show(){
+        return view('');
+    }
     public function create(){
         
     }

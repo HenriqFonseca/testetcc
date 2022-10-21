@@ -19,5 +19,7 @@ class AlunoAccess
         if(auth()->check() AND auth()->user()->aluno){
             return $next($request);
         }
+
+        dd('vc é professor corno');
     }
 }
