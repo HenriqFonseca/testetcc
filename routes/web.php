@@ -22,7 +22,7 @@ use App\Models\Exercicio;
 //Route::get('oq vai aparecer na URL' [Controller definido] , 'nome da função que está dentro do controller'])->name('nome que posso usar nos redirecionamentos')
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/treino/aluno', [TreinoController::class, 'aluno'])->middleware(['auth'])->name('treino.aluno');
-Route::get('/treino/professor', [TreinoController::class, 'professor'])->middleware('professor')->name('treino.professor');
+Route::get('/treino/professor', [TreinoController::class, 'index'])->name('treino.professor');
                 // rota para a view login
 Route::get('/login', [ProfileController::class, 'login'])->name('profile.login');
 Route::get('/registrar', [ProfileController::class, 'registrar'])->name('profile.registrar');
