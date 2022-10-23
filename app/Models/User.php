@@ -47,6 +47,6 @@ class User extends Authenticatable
     ];
 
     public function treino(){
-            return $this->belongsTo(Treino::class);
+            return $this->hasOne(Treino::class);
     }
 }

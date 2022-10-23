@@ -12,10 +12,19 @@ class Treino extends Model
         'user_id',
         'instrutor_id',
         'exercicio_id',
+        'perna',
+        'triceps',
+        'biceps',
+        'ombros',
+        'abdomen',
     ];
 
 
     public function user(){
-        return $this->belongsTo('App\Models\User');
+            return $this->belongsTo(User::class);
     }
+
+    public function exercicio(){
+        return $this->belongsTo(Exercicio::class);
+}
 }

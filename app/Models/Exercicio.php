@@ -16,4 +16,9 @@ class Exercicio extends Model
         'ombro',
         'abdomen',
     ];
+
+
+    public function treinos(){
+        return $this->belongsTo(Treino::class);
+}
 }
