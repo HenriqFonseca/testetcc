@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,13 +24,16 @@ class UserController extends Controller
 
     }
 
-    public function login(Request $request){
+    public function login(LoginRequest $request){
 
+        $request->validate();
         if (Auth::attempt(['password' => $request->password, 'cpf'=>$request->cpf])){
             $request->session()->regenerate();
             return redirect()->route('home.index');
         }else{
-            dd('não logou');
+            session()->flash('erro' , 'Usuário inexistente');
+            return redirect()->route('home.index');
+            
         }
     }
 
